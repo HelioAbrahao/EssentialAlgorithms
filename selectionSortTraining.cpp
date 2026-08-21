@@ -1,10 +1,9 @@
 #include<iostream>
 #include<vector>
-#include<algorithm>
 using namespace std;
 
 void selectionSort(vector<int> &vetor){
-    int size = vetor.size();
+    int size = vetor.size(); 
 
     for(int i = 0; i < size - 1; i++){
         int minIndex = i;
@@ -13,20 +12,20 @@ void selectionSort(vector<int> &vetor){
                 minIndex = j;
             }
         }
-        swap(vetor[i], vetor[minIndex]);
+        swap(vetor[i], vetor[minIndex]); 
     }
 }
 
 int main(){
-    ios::sync_with_stdio(false); 
+    ios::sync_with_stdio(false);
 
-    vector<int> v = {7, 2, 5, 13, 28, 23, 67};
+    vector<int> v = {2, 12, 1, 23, 2, 52, 5, 12};
 
-    selectionSort(v);
+    selectionSort(v); 
 
     for(int i = 0; i < v.size(); i++){
         cout << v[i] << " "; 
     }
 
-    return 0; 
+    return 0;
 }

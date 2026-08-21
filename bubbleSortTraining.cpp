@@ -1,6 +1,5 @@
 #include<iostream>
 #include<vector>
-#include<algorithm>
 using namespace std;
 
 void bubbleSort(vector<int> &vetor){
@@ -9,22 +8,22 @@ void bubbleSort(vector<int> &vetor){
     for(int i = 0; i < size; i++){
         for(int j = 0; j < size - 1 - i; j++){
             if(vetor[j] > vetor[j + 1]){
-                swap(vetor[j], vetor[j + 1]);
+                swap(vetor[j], vetor[j + 1]); 
             }
         }
     }
 }
 
 int main(){
-    ios::sync_with_stdio(false); 
+    ios::sync_with_stdio(false);
 
-    vector<int> v = {7, 2, 5, 13, 28, 23, 67};
+    vector<int> v = {2, 12, 1, 23, 2, 52, 5, 12};
 
-    bubbleSort(v);
+    bubbleSort(v); 
 
     for(int i = 0; i < v.size(); i++){
         cout << v[i] << " "; 
     }
 
-    return 0; 
+    return 0;
 }
